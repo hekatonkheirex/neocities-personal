@@ -1,0 +1,336 @@
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0D0208;
+  color: #00FF41;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-top: 60px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navegación */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #0D0208;
+  border-bottom: 1px solid #00FF41;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  color: #0D5B11;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #00FF41;
+  background-color: rgba(0, 255, 65, 0.1);
+}
+
+/* Contenido principal */
+main {
+  flex: 1;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.content {
+  flex: 7;
+  min-width: 0;
+}
+
+.content p {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+/* Títulos */
+h1 {
+  color: #00FF41;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+h2 {
+  color: #00FF41;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Enlaces */
+a {
+  color: #00FF41;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #008F11;
+}
+
+/* Sidebar de badges */
+.related {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.badge-container {
+  display: inline-block;
+}
+
+.badge-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #00FF41;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.6);
+}
+
+/* Footer */
+footer {
+  background-color: #0D0208;
+  border-top: 1px solid #00FF41;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.counter {
+  text-align: center;
+}
+
+.counter p {
+  margin-bottom: 10px;
+}
+
+.counter-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-display img {
+  border: 1px solid #00FF41;
+}
+
+.license {
+  text-align: center;
+}
+
+.license p {
+  margin-bottom: 10px;
+}
+
+.license-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding-top: 50px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  nav ul {
+    justify-content: space-around;
+  }
+
+  nav ul li a {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .related {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .badge-container {
+    width: 120px;
+  }
+
+  main {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  nav ul li a {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .badge-container {
+    width: 100px;
+  }
+}
+/* Skip link (accesibilidad) */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  padding: 10px 12px;
+  background-color: #0D0208;
+  border: 1px solid #00FF41;
+  color: #00FF41;
+  z-index: 2000;
+}
+
+.skip-link:focus {
+  left: 10px;
+}
+
+/* Focus visible para navegación por teclado */
+a:focus-visible {
+  outline: 2px solid #00FF41;
+  outline-offset: 2px;
+}
+
+/* Fondo Matrix */
+#matrix {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Reduce motion: si el usuario prefiere menos movimiento, no mostramos animación */
+@media (prefers-reduced-motion: reduce) {
+  #matrix {
+    display: none;
+  }
+}
+
+/* =========================================================
+   Add-ons (non-breaking): license page + accessibility
+   Paste BELOW your existing CSS (do not remove your styles)
+   ========================================================= */
+
+/* Keyboard skip link (only visible on focus) */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  background: #0D0208;
+  border: 1px solid #00FF41;
+  padding: 8px 10px;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  left: 10px;
+}
+
+/* Clear keyboard focus ring without altering your hover styles */
+a:focus-visible {
+  outline: 2px solid #00FF41;
+  outline-offset: 2px;
+}
+
+/* Make GPL text readable on your theme */
+pre, code {
+  font-family: "Space Mono", monospace;
+}
+
+pre {
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid #00FF41;
+  padding: 16px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 2em auto;
+  max-width: 800px;
+}
+
+/* If you use the Matrix canvas background */
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #matrix { display: none; }
+}
