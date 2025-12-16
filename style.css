@@ -78,6 +78,31 @@ main {
   text-align: justify;
 }
 
+/* Landing: ritmo vertical consistente (solo Home) */
+.content.landing h2{
+  margin: 1.2rem 0 0.55rem;
+}
+
+.content.landing p{
+  margin: 0 0 0.9rem;
+}
+
+.content.landing ul{
+  margin: 0.35rem 0 1.05rem;
+  padding-left: 1.2rem;
+}
+
+.content.landing li{
+  margin: 0.25rem 0;
+}
+
+/* Evita que el último bloque deje “aire” de más */
+.content.landing ul:last-child{
+  margin-bottom: 0;
+}
+
+.muted{ opacity: .85; }
+
 /* Títulos */
 h1 {
   color: #00FF41;
@@ -239,6 +264,7 @@ footer {
     width: 100px;
   }
 }
+
 /* Skip link (accesibilidad) */
 .skip-link {
   position: absolute;
