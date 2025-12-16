@@ -3,24 +3,42 @@
 Source code licensed under GNU GPL v3.0
 https://www.gnu.org/licenses/gpl-3.0.html
 -->
+
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>No encontrado (404)</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="resources/images/favicon.ico">
-  <script src="resources/js/matrix.js" defer></script>
+  <!-- Codificación para mostrar los acentos en español -->
+  <meta charset="utf-8"/>
+  
+  <meta content="Sitio personal de Rodrigo Y. Murayama - Profesional de informática y electrónica" name="description"/>
+  <meta content="Rodrigo Y. Murayama" name="author"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  
+  <!-- Importa el archivo style.css -->
+  <link href="style.css" rel="stylesheet"/>
+  
+  <!-- Importa fuente de Google Fonts, en este caso Space Mono -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Agrega ícono en el título de la página -->
+  <link href="resources/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  
+  <!-- Muestra el título de la página en la pestaña del navegador -->
+  <title>La Matrix de Mura</title>
+  <script defer="True" src="resources/js/matrix.js"></script>
+
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
-  <canvas id="matrix" aria-hidden="true"></canvas>
-
+  <a class="skip-link" href="#inicio">Saltar al contenido</a><canvas aria-hidden="true" id="matrix"></canvas>
+  
+  <!-- Navegación principal -->
   <nav aria-label="Navegación principal">
     <ul>
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="index.html#acerca">Acerca De</a></li>
-      <li><a href="index.html#contacto">Contacto</a></li>
+      <li><a href="#acerca">Acerca De</a></li>
+      <li><a href="/pages/contacto.html">Contacto</a></li>
     </ul>
   </nav>
 
@@ -30,16 +48,13 @@ https://www.gnu.org/licenses/gpl-3.0.html
         <h1>404</h1>
       </header>
       <p>No encontré esa página. Capaz se cayó por el agujero verde de la Matrix.</p>
-      <p><a href="/index.html">Volver al inicio</a></p>
+      <p><a href="index.html">Volver al inicio</a></p>
     </section>
   </main>
 
   <footer>
-    <div class="footer-content">
-      <p>
-        © 2025 Rodrigo Y. Murayama. Source code licensed under the
-        <a href="/license">GNU General Public License v3.0</a>.
-      </p>
+    <div class="license">
+      <p>© 2025 Rodrigo Y. Murayama. El código fuente de este sitio está licenciado bajo <a href="/license">GNU General Public License v3.0</a>.</p>
     </div>
   </footer>
 </body>

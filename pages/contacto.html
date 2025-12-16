@@ -5,40 +5,40 @@ https://www.gnu.org/licenses/gpl-3.0.html
 -->
 
 <html lang="es">
-
 <head>
+  
   <!-- Codificación para mostrar los acentos en español -->
   <meta charset="utf-8"/>
-  
   <meta content="Sitio personal de Rodrigo Y. Murayama - Profesional de informática y electrónica" name="description"/>
   <meta content="Rodrigo Y. Murayama" name="author"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   
   <!-- Importa el archivo style.css -->
-  <link href="style.css" rel="stylesheet"/>
-  
+ 
+  <link href="../style.css" rel="stylesheet"/>
+ 
   <!-- Importa fuente de Google Fonts, en este caso Space Mono -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
-  
+ 
   <!-- Agrega ícono en el título de la página -->
-  <link href="resources/images/favicon.ico" rel="icon" type="image/x-icon"/>
-  
+  <link href="../resources/images/favicon.ico" rel="icon" type="image/x-icon"/>
+ 
   <!-- Muestra el título de la página en la pestaña del navegador -->
   <title>La Matrix de Mura</title>
-  <script defer="True" src="resources/js/matrix.js"></script>
+  <script defer="True" src="../resources/js/matrix.js"></script>
 </head>
-
 <body>
-  <a class="skip-link" href="#inicio">Saltar al contenido</a><canvas aria-hidden="true" id="matrix"></canvas>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+  <canvas aria-hidden="true" id="matrix"></canvas>
   
   <!-- Navegación principal -->
   <nav aria-label="Navegación principal">
     <ul>
-      <li><a href="index.html">Inicio</a></li>
+      <li><a href="../index.html">Inicio</a></li>
       <li><a href="#acerca">Acerca De</a></li>
-      <li><a href="/pages/contacto.html">Contacto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
   
@@ -48,20 +48,28 @@ https://www.gnu.org/licenses/gpl-3.0.html
     <header>
       <h1>La Matrix de Mura</h1>
     </header>
-    
     <div class="row">
       <section class="content" id="inicio">
         <!-- Título secundario de la página -->
-        <h2 id="acerca">¡Hola, soy Mura!</h2>
-        <p>Soy un profesional de la informática/electrónica basado en Asunción, Paraguay con pasión por las nuevas tecnologías. Me especializo en implementación de software y ambientes colaborativos, y me encanta trabajar en todo lo relacionado a soluciones diseñadas a necesidades de los clientes.</p>
-        <p>Comencé mi camino en marzo de 2004, gracias a una oportunidad luego de una pasantía laboral requerida por la secundaria técnica.</p>
-        <p>Desde entonces, he adquirido bastante experiencia en resolución de problemas de hardware, que luego lo acompañé con el software, con mucho pensamiento crítico.</p>
-        <p>Cuando no estoy trabajando, puedes encontrarme haciendo experimentos como ésta página, jugando videojuegos o saliendo a tomar fotografías. Creo en el kaizen, el método de la 5S japonesa y el yuugen.</p>
-        <p>Actualmente, estoy aprendiendo <a href="https://www.codecademy.com/enrolled/courses/learn-html">HTML y CSS</a>, y siempre emocionado de colaborar/aprender/conectar con otros/as profesionales/entusiastas.</p>
+        <h2 id="acerca">Contacto</h2>
+      <p>
+        <div id="formkeep-embed" data-formkeep-url="https://formkeep.com/p/b467f7ba1c81dafc611f460ef1936174?embedded=1"></div>
         
-        <p id="contacto">¡No dudes en contactarme en <a href="mailto:contactameya@pm.me">contactameya@pm.me</a> o conectar conmigo en <a href="https://x.com/_mura">X!</a></p>
+        <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.formkeep.com/formkeep-embed.js"></script>
+        <!-- Get notified when the form is submitted, add your own code below: -->
+        <script>
+          const formkeepEmbed = document.querySelector('#formkeep-embed')
+          formkeepEmbed.addEventListener('formkeep-embed:submitting', _event => {
+            console.log('Submitting form...')
+          })
+          
+          formkeepEmbed.addEventListener('formkeep-embed:submitted', _event => {
+            console.log('Submitted form...')
+          })
+        </script>
+      </p>
       </section>
-      
       <aside class="related">
         <div class="badge-container">
           <a aria-label="Alojado en Neocities" href="https://neocities.org/" rel="noopener noreferrer" target="_blank">
@@ -84,24 +92,14 @@ https://www.gnu.org/licenses/gpl-3.0.html
           </a>
         </div>
       </aside>
-      
     </div>
   </main>
   
   <!-- Pie de página -->
   <footer>
-    <div class="counter">
-      <p>Visitantes desde octubre 2025:</p>
-      <div class="counter-display">
-        <a aria-label="Contador de visitantes" href="https://www.counter12.com">
-          <img alt="Contador de visitantes" loading="lazy" src="https://www.counter12.com/img-C03bc43CwWxa0WY2-8.gif"/>
-        </a>
-        <script src="https://www.counter12.com/ad.js?id=C03bc43CwWxa0WY2" type="text/javascript"></script>
-      </div>
-    </div>
     <div class="license">
       <p>© 2025 Rodrigo Y. Murayama. El código fuente de este sitio está licenciado bajo <a href="/license">GNU General Public License v3.0</a>.</p>
     </div>
   </footer>
-</body>
+  </body>
 </html>
